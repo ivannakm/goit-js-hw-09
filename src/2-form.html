@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
 
-    <main>
-      <div class="container">
-        <h1 class="main-title">
-          Form
-        </h1>
-        <a class="back-link" href="./index.html">Go back</a>
-      </div>
-    </main>
+<div class="container">
+  <form class="feedback-form" autocomplete="off">
+    <label class="form-label">
+      Email
+      <input class="form-input" type="email" name="email" autofocus />
+    </label>
+    <label class="form-label">
+      Message
+      <textarea class="form-message" name="message" rows="8"></textarea>
+    </label>
+    <button class="form-btn" type="submit">Submit</button>
+  </form>
+</div>
 
     <script type="module" src="./js/2-form.js"></script>
   </body>
