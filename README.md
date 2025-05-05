@@ -111,3 +111,28 @@ Pages, у гілку `gh-pages`, щоразу, коли оновлюється �
 3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
    відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
    буде вказано в чому проблема.
+
+
+my comments:
+formData = {
+  email: parsed.email ?? '',
+  message: parsed.message ?? '',
+};
+
+another way via if:
+
+formData = { email: '', message: '' };
+
+if (parsed.email !== undefined && parsed.email !== null) {
+  formData.email = parsed.email;
+}
+
+if (parsed.message !== undefined && parsed.message !== null) {
+  formData.message = parsed.message;
+}
+ What it does:
+
+Explicitly defines only the email and message properties.
+If either parsed.email or parsed.message is undefined or null, it sets that field to an empty string.
+Prevents accidental addition of unexpected fields from parsed.
+?? is shorthand for: "use this value unless it's null or undefined."
